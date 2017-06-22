@@ -592,4 +592,22 @@ FIELDS
   Date(Floor($1)) AS [Date] Tagged ('$axis', '$date', '$qualified'),
   Date(Floor($1), 'D') AS [_Date] Tagged ('$axis', '$date', '$hidden', '$simplified');
 
-DERIVE FIELDS FROM FIELDS [tblMaterieel.Aanmaakdatum], [VerkoopDatum], [Bouwdatum], [OpdrachtDatum], [OpdrachtEindDatum], [tblOpdracht.Aanmaakdatum], [DatumUitDienst], [tblPersoneel.DatumInactiefGezet], [tblPersoneel.Aanmaakdatum], [DatumUrenReg-Yeardate], [tblUrenRegistratieRegel.Aanmaakdatum], [zLookupAlgemeen.Aanmaakdatum], [zLookupBedrijven.Aanmaakdatum], [WeekFirstDay], [WeekLastDay], [tblUrenregistratie.DatumUrenReg], [Aanmaakdatum], [Ritdatum], [tblRit.Aanmaakdatum] USING [autoCalendar] ;
+DERIVE FIELDS FROM FIELDS
+[tblMaterieel.Aanmaakdatum],
+[VerkoopDatum], [Bouwdatum], 
+[OpdrachtDatum], 
+[OpdrachtEindDatum], 
+[tblOpdracht.Aanmaakdatum], 
+[DatumUitDienst], 
+[tblPersoneel.DatumInactiefGezet], 
+[tblPersoneel.Aanmaakdatum], 
+[DatumUrenReg-Yeardate], 
+[tblUrenRegistratieRegel.Aanmaakdatum], 
+[zLookupAlgemeen.Aanmaakdatum], 
+[zLookupBedrijven.Aanmaakdatum], 
+[WeekFirstDay], 
+[WeekLastDay], 
+[tblUrenregistratie.DatumUrenReg], 
+[Aanmaakdatum], 
+[Ritdatum], 
+tblRit.Aanmaakdatum] USING [autoCalendar] ;
